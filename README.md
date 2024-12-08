@@ -1,28 +1,14 @@
-# Albert
-Swiss German Voice Assistant for Visually Impaired
+Albert - A Voice Assistant for Accessibility
+Albert is a voice assistant project I am building for my father, who is visually impaired. The goal is to help him navigate the digital world more independently while spending meaningful time together during the development process. This project is also my Christmas gift to him.
 
-Swiss German Voice Assistant for Visually Impaired
-This project aims to develop a user-friendly voice assistant tailored specifically for the needs of visually impaired individuals. The assistant will support Swiss German to provide a better and more natural user experience. It is designed to simplify daily tasks and improve access to digital information for visually impaired users.
+Initially, Albert is being developed on a Raspberry Pi, focusing on accurate voice-to-text and natural text-to-voice capabilities in German. While the current version aims to respond to simple commands and provide accessibility features, the project is expected to evolve significantly over time as new ideas and requirements emerge.
 
-Features (MVP)
-Speech Recognition: Supports Swiss German through adjustments and dialect mapping.
-Speech Output: Responds in Swiss German using predefined phrases and Text-to-Speech (TTS) solutions.
-Basic Commands:
-Announce the current time and date.
-Create reminders or simple notifications.
-Provide weather updates or general information.
-Future Enhancements
-OCR Integration: Read text from printed or digital documents aloud.
-Smart Home Control: Enable control of devices like lights or TVs.
-Advanced Speech Models: Train a custom model for Swiss German (e.g., using Coqui TTS or Mozilla DeepSpeech).
-Offline Functionality: Use local speech recognition models to ensure privacy.
-Technology Stack
-Programming Language: Python
-Speech Recognition:
-Google Speech-to-Text API (configured with de-CH for Swiss German).
-Alternative: Mozilla DeepSpeech or Vosk for offline capabilities.
-Speech Output:
-gTTS or pyttsx3 for voice synthesis.
-Hardware:
-Microphone (e.g., USB microphone or ReSpeaker).
-Speaker (external or built-in).
+Current Features
+Voice Activation: Albert listens for the phrase "Hallo Albert!" to start interactions.
+Voice-to-Text: Converts spoken commands into actionable text.
+Natural Text-to-Voice: Delivers responses in a natural-sounding voice.
+Future Directions
+Expanding language support, potentially including Swiss German.
+Adding advanced accessibility features tailored to individual needs.
+Experimenting with different hardware and software platforms for scalability.
+This project is a personal journey, blending technical exploration and family connection, with the hope of creating something meaningful and practical.
