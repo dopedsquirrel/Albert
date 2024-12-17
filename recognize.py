@@ -19,6 +19,10 @@ def transcribe_audio(model_path, audio_path):
         if len(data) == 0:
             break
         recognizer.AcceptWaveform(data)
+
+        if "hallo albert" in json.loads(result)["text"].lower():
+            print("Aktivierungswort erkannt: Hallo Albert!")
+
     
     result = recognizer.FinalResult()
     print("Transkription abgeschlossen:")
