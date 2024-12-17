@@ -1,0 +1,11 @@
+# Ignoriere Modell-Daten und große Dateien
+vosk-model/
+*.zip
+*.tar.gz
+
+# Ignoriere alle Docker-Daten
+*.docker
+
+# Ignoriere Logs und temporäre Dateien
+*.log
+tmp/
