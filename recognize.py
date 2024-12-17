@@ -4,7 +4,7 @@ import json
 
 # Pfade zu Modell und Audio-Datei
 MODEL_PATH = "model"
-AUDIO_PATH = "audio/albert-message.wav"
+AUDIO_PATH = "albert-message-converted.wav"
 
 def transcribe_audio(model_path, audio_path):
     print("Lade Vosk-Modell...")
