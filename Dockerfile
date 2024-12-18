@@ -1,11 +1,25 @@
 # Verwende ein Python-3.9-Image
 FROM python:3.9
 
-# Installiere die Vosk-Python-Bibliothek
-RUN pip install vosk
+# Label für die Dokumentation
+LABEL maintainer="dopedsquirrel"
 
 # Arbeitsverzeichnis setzen
 WORKDIR /app
+
+# Systemabhängigkeiten installieren
+RUN apt-get update && apt-get install -y \
+    alsa-utils \            
+    portaudio19-dev \       
+    python3-dev \           
+    gcc \                   
+    libasound2-dev && \     
+    rm -rf /var/lib/apt/lists/* \
+    git
+
+# Installiere Python-Bibliotheken
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Kopiere das Python-Skript und die Modelle
 COPY . /app
