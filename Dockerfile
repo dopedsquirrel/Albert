@@ -12,10 +12,10 @@ RUN apt-get update && apt-get install -y \
     alsa-utils \            
     portaudio19-dev \       
     python3-dev \           
-    gcc \                   
-    libasound2-dev && \     
-    rm -rf /var/lib/apt/lists/* \
-    git
+    gcc \ 
+    git \                  
+    libasound2-dev && \    
+    rm -rf /var/lib/apt/lists/* 
 
 # Installiere Python-Bibliotheken
 COPY requirements.txt requirements.txt
