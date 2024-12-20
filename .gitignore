@@ -2,7 +2,7 @@
 vosk-model/
 *.zip
 *.tar.gz
-*.wav
+
 
 # Ignoriere alle Docker-Daten
 *.docker
