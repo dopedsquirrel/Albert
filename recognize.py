@@ -2,10 +2,11 @@ import pyaudio
 import vosk
 import json
 import os
+import
 
 # Konfiguration
 MODEL_PATH = "model"  # Pfad zum Vosk-Modell
-AUDIO_PATH = "/app/albert-message.wav"  # Pfad zur Weihnachtsnachricht
+AUDIO_PATH = "app/albert-message.wav"  # Pfad zur Weihnachtsnachricht
 SAMPLE_RATE = 16000   # Abtastrate
 CHUNK_SIZE = 4000     # Größe der Audio-Chunks
 
