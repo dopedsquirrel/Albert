@@ -4,6 +4,7 @@ import json
 
 # Konfiguration
 MODEL_PATH = "model"  # Pfad zum Vosk-Modell
+AUDIO_FILE = "albert_message.wav"  # Pfad zur Weihnachtsnachricht
 SAMPLE_RATE = 16000   # Abtastrate
 CHUNK_SIZE = 4000     # Größe der Audio-Chunks
 
@@ -36,6 +37,10 @@ def main():
                 # Überprüfe, ob das Aktivierungswort gesagt wurde
                 if "hallo albert" in result["text"].lower():
                     print("Aktivierungswort erkannt: Hallo Albert!")
+
+                    # Weihnachtsnachricht abspielen
+                    play_audio(AUDIO_FILE)
+                    
     except KeyboardInterrupt:
         print("\nBeende...")
     finally:

@@ -1,5 +1,6 @@
 # Ignoriere Modell-Daten und große Dateien
 vosk-model/
+model/
 *.zip
 *.tar.gz
 
