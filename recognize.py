@@ -1,6 +1,7 @@
 import pyaudio
 import vosk
 import json
+import os
 
 # Konfiguration
 MODEL_PATH = "model"  # Pfad zum Vosk-Modell
@@ -40,7 +41,7 @@ def main():
 
                     # Weihnachtsnachricht abspielen
                     play_audio(AUDIO_FILE)
-                    
+
     except KeyboardInterrupt:
         print("\nBeende...")
     finally:
