@@ -5,7 +5,7 @@ import os
 
 # Konfiguration
 MODEL_PATH = "model"  # Pfad zum Vosk-Modell
-AUDIO_FILE = "albert_message.wav"  # Pfad zur Weihnachtsnachricht
+AUDIO_PATH = "albert-message.wav"  # Pfad zur Weihnachtsnachricht
 SAMPLE_RATE = 16000   # Abtastrate
 CHUNK_SIZE = 4000     # Größe der Audio-Chunks
 
