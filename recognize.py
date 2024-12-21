@@ -2,6 +2,7 @@ import pyaudio
 import vosk
 import json
 import os
+import wave
 
 # Konfiguration
 MODEL_PATH = "model"  # Pfad zum Vosk-Modell
