@@ -2,7 +2,6 @@ import pyaudio
 import vosk
 import json
 import os
-import
 
 # Konfiguration
 MODEL_PATH = "model"  # Pfad zum Vosk-Modell
