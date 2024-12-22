@@ -51,7 +51,7 @@ def main():
         p.terminate()
 
 
-def play_audio(AUDIO_PATH)
+def play_audio(AUDIO_PATH):
     """Spielt die angegebene WAV-Datei über das definierte Ausgabegerät ab."""
 
     print(f"Spiele Audio ab: {AUDIO_PATH}")
@@ -64,7 +64,7 @@ def play_audio(AUDIO_PATH)
                         channels=wf.getnchannels(),
                         rate=wf.getframerate(),
                         output=True)
-                        
+
         # Lese und spiele die WAV-Datei
         data = wf.readframes(1024)
         while data:
