@@ -55,7 +55,7 @@ def play_audio(AUDIO_PATH):
     """Spielt die angegebene WAV-Datei über das definierte Ausgabegerät ab."""
 
     print(f"Spiele Audio ab: {AUDIO_PATH}")
-    wf = wave.open(file_path, 'rb')
+    wf = wave.open(AUDIO_PATH, 'rb')
     p = pyaudio.PyAudio()
     
     try:
