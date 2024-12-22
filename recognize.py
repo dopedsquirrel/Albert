@@ -50,5 +50,37 @@ def main():
         stream.close()
         p.terminate()
 
+
+def play_audio(AUDIO_PATH)
+    """Spielt die angegebene WAV-Datei über das definierte Ausgabegerät ab."""
+
+    print(f"Spiele Audio ab: {AUDIO_PATH}")
+    wf = wave.open(file_path, 'rb')
+    p = pyaudio.PyAudio()
+    
+    try:
+        # Öffne einen Stream zur Wiedergabe
+        stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
+                        channels=wf.getnchannels(),
+                        rate=wf.getframerate(),
+                        output=True)
+                        
+        # Lese und spiele die WAV-Datei
+        data = wf.readframes(1024)
+        while data:
+            stream.write(data)
+            data = wf.readframes(1024)
+        
+         print("Wiedergabe abgeschlossen.")
+
+    except OSError as e:
+        print(f"Fehler beim Abspielen der Datei: {e}")
+
+    finally:
+        # Schließe den Stream
+        stream.stop_stream()
+        stream.close()
+        p.terminate()
+
 if __name__ == "__main__":
     main()
