@@ -71,7 +71,7 @@ def play_audio(AUDIO_PATH):
             stream.write(data)
             data = wf.readframes(1024)
         
-         print("Wiedergabe abgeschlossen.")
+        print("Wiedergabe abgeschlossen.")
 
     except OSError as e:
         print(f"Fehler beim Abspielen der Datei: {e}")
