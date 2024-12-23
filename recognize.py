@@ -3,6 +3,7 @@ import vosk
 import json
 import os
 import wave
+import simpleaudio as sa
 
 # Konfiguration
 MODEL_PATH = "model"  # Pfad zum Vosk-Modell
@@ -82,10 +83,11 @@ def play_audio(AUDIO_PATH):
         stream.close()
         p.terminate()
 
-
 def play_ping():
-    sound = AudioSegment.from_wav("/app/Doorbell_Notification.wav")  # Pfad zu deiner .wav-Datei
-    play(sound)
+    wave_obj = sa.WaveObject.from_wave_file("/app/Doorbell_Notification.wav")  # Pfad zu deiner .wav-Datei
+    play_obj = wave_obj.play()
+    play_obj.wait_done()  # Warten, bis der Ton abgespielt wurde
+
 
 if __name__ == "__main__":
     play_ping()
