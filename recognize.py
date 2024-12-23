@@ -82,5 +82,11 @@ def play_audio(AUDIO_PATH):
         stream.close()
         p.terminate()
 
+
+def play_ping():
+    sound = AudioSegment.from_wav("/app/Doorbell_Notification.wav")  # Pfad zu deiner .wav-Datei
+    play(sound)
+
 if __name__ == "__main__":
+    play_ping()
     main()
